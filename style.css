@@ -1,0 +1,404 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik+Bubbles);
+
+/* Animations */
+
+@keyframes hover {
+    0% {
+        transform: translate3d(0, 0, 0);
+        color: #b81313;
+    }
+    50% {
+        transform: translate3d(0, -.2em, 0);
+        color: #db3e3e;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        color: #b81313;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0px 0px .3em rgba(255, 255, 255, .8);
+    }
+    50% {
+        box-shadow: 0px 0px .3em rgba(255, 255, 255, .4);
+    }
+    100% {
+        box-shadow: 0px 0px .3em rgba(255, 255, 255, .8);
+    }
+}
+
+
+/* Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 200%;
+/ / This is how you control the size padding: 2 em;
+    background: linear-gradient(#c9e1e0, #fff) no-repeat;
+}
+
+.headline {
+    margin-top: .9em;
+    margin-bottom: .5em;
+    /*color: #b81313;*/
+    background-color: #eaca47;
+    font-family: 'Rubik Bubbles', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 0 .05em .1em #fff;
+    animation-name: hover;
+    animation-iteration-count: infinite;
+    animation-duration: 3.5s;
+}
+
+.fir {
+    position: relative;
+    margin: 0 auto;
+    width: 8em;
+}
+
+.fir__item {
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 2.3em solid transparent;
+    border-right: 2.3em solid transparent;
+    border-bottom: 3em solid #1d7015;
+
+    &:nth-child(2) {
+        margin-top: -1.3em;
+        border-left-width: 3em;
+        border-right-width: 3em;
+        border-bottom-width: 4em;
+    }
+
+    &:nth-child(3) {
+        margin-top: -1.7em;
+        border-left-width: 4em;
+        border-right-width: 4em;
+        border-bottom-width: 5em;
+    }
+}
+
+.fir__log {
+    margin: 0 auto;
+    width: 1.3em;
+    height: 1.3em;
+    background: #8c370f;
+    background: linear-gradient(#8c370f, #5c240a);
+}
+
+.orbs {
+    position: absolute;
+    width: .6em;
+    height: .6em;
+    border-radius: 50%;
+    box-shadow: 0px 0px .3em rgba(255, 255, 255, .8);
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 2.5s;
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0px 0px .3em rgba(255, 255, 255, .8);
+        animation-name: pulse;
+        animation-iteration-count: infinite;
+        animation-duration: 2.5s;
+    }
+}
+
+.orbs-1 {
+    top: 1.2em;
+    left: 3.2em;
+    background: #ed0000;
+    background: radial-gradient(circle, #FF0000FF, #ed0000);
+
+    &:before {
+        top: 2.4em;
+        left: 1.5em;
+        width: .6em;
+        height: .6em;
+        background: #ed0000;
+        background: radial-gradient(circle, #FF0000FF, #ed0000);
+    }
+
+    &:after {
+        top: .7em;
+        left: 1em;
+        width: .8em;
+        height: .8em;
+        background: #e7c400;
+        background: radial-gradient(circle, #fbeea3, #e7c400);
+    }
+}
+
+.orbs-2 {
+    top: 3.4em;
+    left: 2.9em;
+    background: #e7c400;
+    background: radial-gradient(circle, #fbeea3, #e7c400);
+
+    &:before {
+        top: 2.4em;
+        left: 1.5em;
+        width: .6em;
+        height: .6em;
+        background: #e7c400;
+        background: radial-gradient(circle, #fbeea3, #e7c400);
+    }
+
+    &:after {
+        top: 1.2em;
+        left: .5em;
+        width: .8em;
+        height: .8em;
+        background: #ed0000;
+        background: radial-gradient(circle, #f77373, #ed0000);
+    }
+}
+
+.orbs-3 {
+    top: 6.4em;
+    left: 2.2em;
+    background: #e7c400;
+    background: radial-gradient(circle, #fbeea3, #e7c400);
+
+    &:before {
+        top: 1.4em;
+        left: 3.5em;
+        width: .6em;
+        height: .6em;
+        background: #e7c400;
+        background: radial-gradient(circle, #fbeea3, #e7c400);
+    }
+
+    &:after {
+        top: .9em;
+        left: 1.4em;
+        width: .8em;
+        height: .8em;
+        background: #ed0000;
+        background: radial-gradient(circle, #f77373, #ed0000);
+    }
+}
+
+.orbs-4 {
+    top: 7.9em;
+    left: 1.7em;
+    background: #ed0000;
+    background: radial-gradient(circle, #f77373, #ed0000);
+}
+
+body {
+    background: #db3b2f;
+}
+
+.intro,
+.intro a {
+    color: #fff;
+    font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
+}
+
+/* customizable snowflake styling */
+.snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial;
+    text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+    100% {
+        top: 100%
+    }
+}
+
+@-webkit-keyframes snowflakes-shake {
+    0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px)
+    }
+    50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px)
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px)
+    }
+}
+
+@keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+    100% {
+        top: 100%
+    }
+}
+
+@keyframes snowflakes-shake {
+    0% {
+        transform: translateX(0px)
+    }
+    50% {
+        transform: translateX(80px)
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+.snowflake {
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+    -webkit-animation-duration: 10s, 3s;
+    -webkit-animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-play-state: running, running;
+    animation-name: snowflakes-fall, snowflakes-shake;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running
+}
+
+.snowflake:nth-of-type(0) {
+    left: 1%;
+    -webkit-animation-delay: 0s, 0s;
+    animation-delay: 0s, 0s
+}
+
+.snowflake:nth-of-type(1) {
+    left: 10%;
+    -webkit-animation-delay: 1s, 1s;
+    animation-delay: 1s, 1s
+}
+
+.snowflake:nth-of-type(2) {
+    left: 20%;
+    -webkit-animation-delay: 6s, .5s;
+    animation-delay: 6s, .5s
+}
+
+.snowflake:nth-of-type(3) {
+    left: 30%;
+    -webkit-animation-delay: 4s, 2s;
+    animation-delay: 4s, 2s
+}
+
+.snowflake:nth-of-type(4) {
+    left: 40%;
+    -webkit-animation-delay: 2s, 2s;
+    animation-delay: 2s, 2s
+}
+
+.snowflake:nth-of-type(5) {
+    left: 50%;
+    -webkit-animation-delay: 8s, 3s;
+    animation-delay: 8s, 3s
+}
+
+.snowflake:nth-of-type(6) {
+    left: 60%;
+    -webkit-animation-delay: 6s, 2s;
+    animation-delay: 6s, 2s
+}
+
+.snowflake:nth-of-type(7) {
+    left: 70%;
+    -webkit-animation-delay: 2.5s, 1s;
+    animation-delay: 2.5s, 1s
+}
+
+.snowflake:nth-of-type(8) {
+    left: 80%;
+    -webkit-animation-delay: 1s, 0s;
+    animation-delay: 1s, 0s
+}
+
+.snowflake:nth-of-type(9) {
+    left: 90%;
+    -webkit-animation-delay: 3s, 1.5s;
+    animation-delay: 3s, 1.5s
+}
+
+/* Demo Purpose Only*/
+.demo {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.demo a {
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+}
+
+.star {
+  position: relative;
+
+  display: inline-block;
+  width: 0;
+  height: 0;
+
+  margin-left: .8em;
+  margin-right: .9em;
+  margin-bottom: .7em;
+
+  border-right:  .3em solid transparent;
+  border-bottom: .7em  solid #FC0;
+  border-left:   .3em solid transparent;
+
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+
+  &:before, &:after {
+    content: '';
+
+    display: block;
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    top: .6em;
+    left: -1em;
+
+    border-right:  1em solid transparent;
+    border-bottom: .7em  solid #FC0;
+    border-left:   1em solid transparent;
+
+    transform: rotate(-35deg);
+  }
+
+  &:after {
+    transform: rotate(35deg);
+  }
+}
+
+body {
+      align-items: center;
+    }
