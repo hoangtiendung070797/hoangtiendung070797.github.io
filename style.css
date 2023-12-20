@@ -370,11 +370,12 @@ body {
   margin-bottom: .7em;
 
   border-right:  .3em solid transparent;
-  border-bottom: .7em  solid #FC0;
+  border-bottom: .7em  solid #ffd637;
   border-left:   .3em solid transparent;
 
   /* Controlls the size of the stars. */
   font-size: 24px;
+  animation: sparkleAnimation 1.5s infinite alternate;
 
   &:before, &:after {
     content: '';
@@ -388,7 +389,7 @@ body {
     left: -1em;
 
     border-right:  1em solid transparent;
-    border-bottom: .7em  solid #FC0;
+    border-bottom: .7em  solid #ffd732;
     border-left:   1em solid transparent;
 
     transform: rotate(-35deg);
@@ -398,7 +399,13 @@ body {
     transform: rotate(35deg);
   }
 }
-
-body {
-      align-items: center;
+@keyframes sparkleAnimation {
+      0% {
+        opacity: 0.8;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
